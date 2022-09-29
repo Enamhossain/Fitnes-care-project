@@ -1,0 +1,9 @@
+.gym-container{
+ display: grid;
+ grid-template-columns: 4fr 1fr; 
+ gap: 20px;
+   
+}
+.logo-img{
+    width: 10px;
+}
