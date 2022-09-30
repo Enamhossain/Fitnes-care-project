@@ -4,12 +4,14 @@ import './Fitness.css';
 
 // product part
 const Fitness = (props) => {
-     console.log(props.card)
-    // const {info,handleAddToCart} = props;
+   
      const {name,img,Time,Age,details} =props.card
+     const {card,handleAddToCart} = props;
+    //  console.log(card)
+
     return (
         <div>
-    <div className="col">
+    <div className="">
     <div className="card Card-main">
        <img src={img} className='card-img-top' alt="" />
       <div className="card-body">
@@ -18,9 +20,9 @@ const Fitness = (props) => {
         <h3 className="card-text">For Age:{Age}</h3>
         <h3 className="card-text">Time required:{Time}</h3>
       </div>
-      <button className="btn btn-primary">
+      <button onClick={() =>props.handleAddToCart(props.card)} className="btn  btn-primary">
        <h4>Add To List</h4>
-  </button>
+      </button>
     </div>
     
   </div>
