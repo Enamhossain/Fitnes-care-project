@@ -2,12 +2,12 @@ import React from 'react';
 import './Fitness.css';
 
 
-// product part
+
 const Fitness = (props) => {
    
      const {name,img,Time,Age,details} =props.card
      const {card,handleAddToCart} = props;
-    //  console.log(card)
+    
 
     return (
         <div>

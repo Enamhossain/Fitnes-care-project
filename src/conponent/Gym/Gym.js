@@ -56,8 +56,6 @@ const Gym = () => {
                         </div>
 
                         <Cart cart={cart}></Cart>
-
-
                     </div>
 
                 </div>
