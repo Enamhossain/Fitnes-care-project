@@ -7,6 +7,7 @@ import Cart from '../Calculate/cart';
 const Gym = () => {
     const [card,setgymcard] = useState([])
      const [cart, setCart] = useState([])
+     
     useEffect(() =>{
          fetch('fitness.json')
         .then(res => res.json())
@@ -18,6 +19,8 @@ const Gym = () => {
          const newcart =[...cart,card]
           setCart(newcart)
        }
+
+      
     return (
         <div>
          <div className='w-25 m-5'>
@@ -38,8 +41,8 @@ const Gym = () => {
             <div className='side-card  mb-2 p-5 '>
                   <div>
                      <div >
-                        <h1>Zahid Hassain</h1>
-                         <h4>Syney,Austraila</h4>
+                        <h1>Enam Hassain</h1>
+                         <h4>Feni,Bangladesh</h4>
                      </div>
 
                   </div>
@@ -49,17 +52,7 @@ const Gym = () => {
                     <h3>6.5kg <small className='h5'>Height</small></h3>
                     <h3>25yrs <small className='h5'>Age</small></h3>    
                     </div>
-                    <div>
-                        <h3>Add A Break</h3>
-                    <div className='d-flex bg-white p-2 '>
-                        <span className='me-3'>10s</span>
-                        <span className='me-3'>20s</span>
-                        <span className='me-3'>30s</span>
-                        <span className='me-3'>40s</span>
-                        
-                    </div>
-
-                    </div>
+                  
                      <Cart cart = {cart}></Cart>
                    
                    </div>
