@@ -1,18 +1,28 @@
 import React, { useEffect,useState } from 'react';
+import Toest from '../toast/Toast';
+import AutohideExample from '../toast/Toast';
+
 
 const Cart = (props) => {
     const {cart} = props
+    const [data,setData]=useState([])
    let total = 0;
    for (const card of cart ){
       total = total + parseInt(card.Time)
    }
+  
     const [time,setTime]=useState([])
    const handleBreakTime=(e) =>{
-    let time=e.target.innerText
-    setTime(time)
-    console.log(time)
- 
+    let somoy=e.target.innerText
+    
+    let newTime =[...data,somoy] 
+    setTime(somoy)
+     console.log(somoy)
+    console.log(newTime)
+    localStorage.setItem('breakTime',JSON.stringify(newTime))
+  
   }
+ 
     return (
        <div>
           <div>
@@ -35,9 +45,7 @@ const Cart = (props) => {
                             <h3>Break Time :{time} </h3>
                         </div>
                     </div>
-                     <button className="btn btn-dark p-3">
-                          <h3>ActivityComplete</h3>
-                     </button>
+                     <Toest></Toest>
                    
                      </div>
     );

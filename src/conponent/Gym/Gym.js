@@ -4,6 +4,7 @@ import logo from '../../logo.png'
 // import '../logo.png'
 import './Gym.css'
 import Cart from '../Calculate/cart';
+
 const Gym = () => {
     const [card,setgymcard] = useState([])
      const [cart, setCart] = useState([])
@@ -18,8 +19,9 @@ const Gym = () => {
        const handleAddToCart = (card) =>{
          const newcart =[...cart,card]
           setCart(newcart)
+          
        }
-
+       
       
     return (
         <div>
@@ -54,6 +56,7 @@ const Gym = () => {
                     </div>
                   
                      <Cart cart = {cart}></Cart>
+                     
                    
                    </div>
 
