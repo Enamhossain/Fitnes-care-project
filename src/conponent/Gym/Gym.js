@@ -54,10 +54,8 @@ const Gym = () => {
                             <h3>6.5kg <small className='h5'>Height</small></h3>
                             <h3>25yrs <small className='h5'>Age</small></h3>
                         </div>
-
                         <Cart cart={cart}></Cart>
                     </div>
-
                 </div>
             </div>
         </div>
