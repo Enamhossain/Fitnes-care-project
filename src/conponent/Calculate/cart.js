@@ -20,10 +20,8 @@ const Cart = (props) => {
     setTime(somoy)
      console.log(somoy)
     console.log(newTime)
-    localStorage.setItem('breakTime',JSON.stringify(newTime))
-     
+    localStorage.setItem('breakTime',JSON.stringify(newTime)) 
   }
- 
     return (
        <div>
           <div>
