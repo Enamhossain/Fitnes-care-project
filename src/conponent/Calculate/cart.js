@@ -12,6 +12,7 @@ const Cart = (props) => {
    }
   
     const [time,setTime]=useState([])
+    
    const handleBreakTime=(e) =>{
     let somoy=e.target.innerText
     
@@ -20,7 +21,7 @@ const Cart = (props) => {
      console.log(somoy)
     console.log(newTime)
     localStorage.setItem('breakTime',JSON.stringify(newTime))
-  
+     
   }
  
     return (
